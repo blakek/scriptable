@@ -4,12 +4,7 @@
 
 import { fetchVideoData, getVlcCallbackUri } from 'src/video';
 
-let urls =
-  args.urls.length > 0
-    ? args.urls
-    : ['https://rumble.com/vgq4g1-kendrick-lamar-dna.html'];
-
-const url = urls[0];
+const url = args.urls[0];
 
 fetchVideoData(url)
   .then(videoData => videoData[0])

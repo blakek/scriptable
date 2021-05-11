@@ -5,12 +5,7 @@
 import { fetchVideoData } from 'src/video';
 
 async function main() {
-  let urls =
-    args.urls.length > 0
-      ? args.urls
-      : ['https://rumble.com/vgq4g1-kendrick-lamar-dna.html'];
-
-  let tasks = urls.map(fetchVideoData);
+  let tasks = args.urls.map(fetchVideoData);
 
   let data = await Promise.all(tasks);
   Pasteboard.copyString(data[0][0].url);
