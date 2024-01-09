@@ -6,14 +6,14 @@
   "license": "UNLICENSED",
   "dependencies": {},
   "devDependencies": {
-    "@types/scriptable-ios": "^1.6.1",
-    "amper-scripts": "^1.0.0",
-    "esbuild": "^0.11.20",
+    "@types/scriptable-ios": "^1.7.5",
+    "amper-scripts": "^1.2.4",
+    "esbuild": "^0.19.11",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {},
   "scripts": {
@@ -21,9 +21,9 @@
     "build:clean": "rimraf ./assets/dist",
     "build:js": "node ./build.js",
     "dev": "node ./build.js --watch",
-    "format-check": "amper-scripts format-check '*.{js,ts,tsx}' 'assets/src/**/*.{js,ts,tsx}'",
-    "format": "amper-scripts format-write '*.{js,ts,tsx}' 'assets/src/**/*.{js,ts,tsx}'",
-    "lint": "amper-scripts lint --config ./.eslintrc.js '*.{js,ts,tsx}' 'assets/src/**/*.{js,ts,tsx}'",
+    "format-check": "amper-scripts format-check '*.{js,ts,tsx}' 'src/**/*.{js,ts,tsx}'",
+    "format": "amper-scripts format-write '*.{js,ts,tsx}' 'src/**/*.{js,ts,tsx}'",
+    "lint": "amper-scripts lint --config ./.eslintrc.js '*.{js,ts,tsx}' 'src/**/*.{js,ts,tsx}'",
     "prepublishOnly": "yarn build",
     "typeCheck": "tsc --noEmit",
     "validate": "run-p format-check lint typeCheck"

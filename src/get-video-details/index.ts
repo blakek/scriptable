@@ -2,7 +2,7 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: red; icon-glyph: link; share-sheet-inputs: url;
 
-import { fetchVideoData } from 'src/video';
+import { fetchVideoData } from "src/video";
 
 async function main() {
   let tasks = args.urls.map(fetchVideoData);

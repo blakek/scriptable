@@ -4,7 +4,7 @@ export interface VideoData {
 }
 
 export function getVlcCallbackUri(video: VideoData, shouldSave: boolean) {
-  const action = shouldSave ? 'download' : 'stream';
+  const action = shouldSave ? "download" : "stream";
   const encodedURL = encodeURIComponent(video.url);
   const encodedFilename = encodeURIComponent(video.filename);
 
